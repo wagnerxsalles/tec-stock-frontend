@@ -1,5 +1,5 @@
 // src/pages/Login.tsx
-import { useState, type FormEvent } from 'react'
+import { useState, type SubmitEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
@@ -12,7 +12,7 @@ export function Login() {
   const { login } = useAuth()
   const navigate = useNavigate()
 
-  async function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     setErro('')
     setCarregando(true)
