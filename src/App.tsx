@@ -8,6 +8,7 @@ import { Equipamentos } from './pages/Equipamentos'
 import { NovoEquipamento } from './pages/NovoEquipamento'
 import { Atendimentos } from './pages/Atendimentos'
 import { NovoAtendimento } from './pages/NovoAtendimento'
+import { BuscaCliente } from './pages/BuscaClientes'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/equipamentos/novo" element={<NovoEquipamento />} />
           <Route path="/atendimentos" element={<Atendimentos />} />
           <Route path="/atendimentos/novo" element={<NovoAtendimento />} />
+          <Route path="/clientes/buscar" element={<BuscaCliente />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/login" replace />} />

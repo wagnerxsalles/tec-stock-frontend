@@ -25,6 +25,9 @@ export function Navbar() {
         </Link>
          <Link to="/atendimentos" className="text-white hover:text-blue-400">
           Atendimentos
+        <Link to="/clientes/buscar" className="text-white hover:text-blue-400">
+          Buscar Cliente
+</Link>
         </Link>
       </div>
       <button

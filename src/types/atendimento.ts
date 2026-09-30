@@ -1,5 +1,6 @@
 
 import type { Equipamento } from './equipamento'
+import type { Cliente } from './cliente'
 
 export interface Movimentacao {
   id: string
@@ -17,4 +18,5 @@ export interface Atendimento {
   observacao: string | null
   data: string
   movimentacoes: Movimentacao[]
+  cliente?: Cliente
 }

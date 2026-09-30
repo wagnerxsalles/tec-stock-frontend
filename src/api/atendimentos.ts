@@ -7,6 +7,12 @@ export async function getAtendimentos(): Promise<Atendimento[]> {
   return response.data
 }
 
+
+export async function getAtendimentosPorCliente(codigo: string): Promise<Atendimento[]> {
+  const response = await api.get<Atendimento[]>(`/atendimentos/cliente/${codigo}`)
+  return response.data
+}
+
 export async function createAtendimento(data: {
   clienteId: string
   tecnicoId: string
@@ -16,4 +22,5 @@ export async function createAtendimento(data: {
 }): Promise<Atendimento> {
   const response = await api.post<Atendimento>('/atendimentos', data)
   return response.data
+  
 }
