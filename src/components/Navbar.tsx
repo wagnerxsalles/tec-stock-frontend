@@ -23,6 +23,9 @@ export function Navbar() {
         <Link to="/equipamentos" className="text-white hover:text-blue-400">
           Equipamentos
         </Link>
+         <Link to="/atendimentos" className="text-white hover:text-blue-400">
+          Atendimentos
+        </Link>
       </div>
       <button
         onClick={handleLogout}

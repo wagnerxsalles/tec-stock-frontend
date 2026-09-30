@@ -5,6 +5,9 @@ import { Dashboard } from './pages/Dashboard'
 import { PrivateRoute } from './routes/PrivateRoute'
 import { Clientes } from './pages/Clientes'
 import { Equipamentos } from './pages/Equipamentos'
+import { NovoEquipamento } from './pages/NovoEquipamento'
+import { Atendimentos } from './pages/Atendimentos'
+import { NovoAtendimento } from './pages/NovoAtendimento'
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/equipamentos" element={<Equipamentos />} />
+          <Route path="/equipamentos/novo" element={<NovoEquipamento />} />
+          <Route path="/atendimentos" element={<Atendimentos />} />
+          <Route path="/atendimentos/novo" element={<NovoAtendimento />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/login" replace />} />

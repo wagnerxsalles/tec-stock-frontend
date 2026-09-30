@@ -1,6 +1,6 @@
-// src/pages/Equipamentos.tsx
 import { useEffect, useState } from 'react'
-import { getEquipamentos } from '../api/equipamento'
+import { Link } from 'react-router-dom'
+import { getEquipamentos } from '../api/equipamentos'
 import type { Equipamento } from '../types/equipamento'
 import { Navbar } from '../components/Navbar'
 
@@ -24,7 +24,15 @@ export function Equipamentos() {
     <div className="min-h-screen bg-slate-900">
       <Navbar />
       <div className="p-8">
-        <h1 className="text-2xl font-bold text-white mb-6">Equipamentos</h1>
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold text-white">Equipamentos</h1>
+          <Link
+            to="/equipamentos/novo"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Novo Equipamento
+          </Link>
+        </div>
 
         {carregando ? (
           <p className="text-white">Carregando...</p>
