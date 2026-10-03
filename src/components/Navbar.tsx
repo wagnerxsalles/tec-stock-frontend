@@ -1,4 +1,4 @@
-// src/components/Navbar.tsx
+
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
@@ -20,14 +20,14 @@ export function Navbar() {
         <Link to="/clientes" className="text-white hover:text-blue-400">
           Clientes
         </Link>
+        <Link to="/clientes/buscar" className="text-white hover:text-blue-400">
+          Buscar Cliente
+        </Link>
         <Link to="/equipamentos" className="text-white hover:text-blue-400">
           Equipamentos
         </Link>
-         <Link to="/atendimentos" className="text-white hover:text-blue-400">
+        <Link to="/atendimentos" className="text-white hover:text-blue-400">
           Atendimentos
-        <Link to="/clientes/buscar" className="text-white hover:text-blue-400">
-          Buscar Cliente
-</Link>
         </Link>
       </div>
       <button
