@@ -1,5 +1,6 @@
+
 import { useEffect, useState, type SubmitEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
 import { createAtendimento } from '../api/atendimentos'
 import { getClientes, criarCliente } from '../api/clientes'
@@ -17,12 +18,13 @@ interface MovimentacaoForm {
 
 export function NovoAtendimento() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
 
   const [clientes, setClientes] = useState<Cliente[]>([])
   const [tecnicos, setTecnicos] = useState<Tecnico[]>([])
   const [equipamentos, setEquipamentos] = useState<Equipamento[]>([])
 
-  const [codigoCliente, setCodigoCliente] = useState('')
+  const [codigoCliente, setCodigoCliente] = useState(searchParams.get('codigo') ?? '')
   const [tecnicoId, setTecnicoId] = useState('')
   const [tipoServico, setTipoServico] = useState('INSTALACAO')
   const [observacao, setObservacao] = useState('')
