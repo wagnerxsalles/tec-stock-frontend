@@ -7,7 +7,7 @@ import { Clientes } from './pages/Clientes'
 import { Equipamentos } from './pages/Equipamentos'
 import { NovoEquipamento } from './pages/NovoEquipamento'
 import { Atendimentos } from './pages/Atendimentos'
-import { NovoAtendimento } from './pages/NovoAtendimento'
+import { NovoAtendimento } from './pages/NovoAtendimentos'
 import { BuscaCliente } from './pages/BuscaClientes'
 
 function App() {
